@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import AddTaskForm from '../AddTaskForm';
-import TaskItem from '../TaskItem';
+import AddTaskForm from '../AddTaskForm/AddTaskForm.jsx';
+import TaskItem from '../TaskItem/TaskItem.jsx';
 
 const API_BASE_URL = 'http://localhost:8000';
 
