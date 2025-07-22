@@ -11,7 +11,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:3000",
-        "https://full-stack-task-manager-application.onrender.com",
+        "https://full-stack-task-manager-application-coral.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
