@@ -6,12 +6,13 @@ from typing import List
 
 app = FastAPI(title="Task Manager API", version="1.0.0")
 
+# ✅ Fixed: Removed trailing slash in Vercel URL
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:3000",
-        "https://full-stack-task-manager-application-coral.vercel.app/",
+        "https://full-stack-task-manager-application-coral.vercel.app",  # No trailing slash
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -28,6 +29,7 @@ async def root():
 
 @app.get("/tasks", response_model=List[TaskResponse])
 async def get_tasks():
+    print("✅ GET /tasks called")  # Optional debug log
     tasks = get_all_tasks()
     return tasks
 
